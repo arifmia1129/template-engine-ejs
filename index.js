@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 const port = process.env.PORT || 8080;
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { title: 'EJS is an awesome template engine for Express' });
 })
 
 app.listen(port, () => {
