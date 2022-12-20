@@ -7,10 +7,10 @@ app.set('view engine', 'ejs');
 const port = process.env.PORT || 8080;
 
 app.get('/about', (req, res) => {
-    res.render('pages/about')
+    res.render('pages/about', { title: 'About Page' })
 })
 app.get('/help', (req, res) => {
-    res.render('pages/help')
+    res.render('pages/help', { title: 'Help' })
 })
 
 app.get('/', (req, res) => {
