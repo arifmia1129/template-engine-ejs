@@ -14,7 +14,26 @@ app.get('/', (req, res) => {
         published: true
     }
 
-    res.render('index', { title: 'EJS is an awesome template engine for Express', post });
+    const posts = [
+        {
+            title: 'Post one',
+            author: 'Arif'
+        },
+        {
+            title: 'Post two',
+            author: 'Arif'
+        },
+        {
+            title: 'Post three',
+            author: 'Binu'
+        },
+        {
+            title: 'Post four',
+            author: 'Binu'
+        },
+
+    ]
+    res.render('index', { title: 'EJS is an awesome template engine for Express', post, posts });
 })
 
 app.listen(port, () => {

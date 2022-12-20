@@ -25,6 +25,18 @@
         <% } else { %>
             <p>Post not yet published</p>
             <% } %>
+
+                <ul>
+                    <% if(posts.length){ %>
+                        <% for(let p of posts){ %>
+                            <li>
+                                <%= p.title %> by <%= p.author %>
+                            </li>
+                            <% } %>
+                                <% }else{ %>
+                                    <li>There is no post available</li>
+                                    <% } %>
+                </ul>
 </body>
 
 </html>
