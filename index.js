@@ -6,6 +6,13 @@ app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 8080;
 
+app.get('/about', (req, res) => {
+    res.render('pages/about')
+})
+app.get('/help', (req, res) => {
+    res.render('pages/help')
+})
+
 app.get('/', (req, res) => {
 
     const post = {
@@ -33,7 +40,7 @@ app.get('/', (req, res) => {
         },
 
     ]
-    res.render('index', { title: 'EJS is an awesome template engine for Express', post, posts });
+    res.render('pages/index', { title: 'EJS is an awesome template engine for Express', post, posts });
 })
 
 app.listen(port, () => {
